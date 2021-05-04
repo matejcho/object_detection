@@ -1,0 +1,11 @@
+Saving model from .weights to .pb
+python save_model.py --weights ./data/yolov4.weights --output ./checkpoints/yolov4-416 --input_size 416 --model yolov4
+
+Running object detection on a photo
+python detect.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --images ./data/images/1330.jpg
+
+Running object detection on a video
+python detect_video.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --video ./data/video/video.mp4 --output ./detections/results.mp4
+
+Running object detection on a webcam
+python detect_video.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --video 0 --output ./detections/WebCamResults.mp4
